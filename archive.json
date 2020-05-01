@@ -1,0 +1,605 @@
+{
+  "magic": "B8n2c@e8kvfx",
+  "timestamp": "2020-05-01T14:59:00.635824+00:00",
+  "repo": "sacmwg/draft-ietf-sacm-coswid",
+  "labels": [
+    {
+      "name": "bug",
+      "description": null,
+      "color": "ee0701"
+    },
+    {
+      "name": "duplicate",
+      "description": null,
+      "color": "cccccc"
+    },
+    {
+      "name": "enhancement",
+      "description": null,
+      "color": "84b6eb"
+    },
+    {
+      "name": "help wanted",
+      "description": null,
+      "color": "128A0C"
+    },
+    {
+      "name": "invalid",
+      "description": null,
+      "color": "e6e6e6"
+    },
+    {
+      "name": "question",
+      "description": null,
+      "color": "cc317c"
+    },
+    {
+      "name": "wontfix",
+      "description": null,
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 1,
+      "id": "MDU6SXNzdWUyMTExMTkzNTA=",
+      "title": "CDDL vs JAS (JAEN)",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/issues/1",
+      "state": "CLOSED",
+      "author": "athiasjerome",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "More of a pointer/open question for the experts than an issue while I'm trying to figure out how potentially avoid potential duplication of efforts in the representation of overlapping schemas\r\nhttps://github.com/OpenC2-org/jaen",
+      "createdAt": "2017-03-01T15:42:42Z",
+      "updatedAt": "2018-11-08T08:32:39Z",
+      "closedAt": "2018-11-08T08:32:39Z",
+      "comments": [
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "MEMBER",
+          "body": "Regarding a quite a few fundamental design principles CDDL is explicitly designed not to be a schema language. If a CDDL-2-JAEN converter is developed it seems feasible to support interoperability of tools. As this issue seems not to have an impact on the process of finalizing CDDL, I am porpoising to table this issue for now until JAS reaches a state, at which point it becomes feasible to talk about interoperability.\r\n\r\nWithout objection from the CBOR WG, this issue will be closed one day before the next moratorium (2018-07-01 (Sunday)).",
+          "createdAt": "2018-06-07T23:41:47Z",
+          "updatedAt": "2018-06-07T23:41:47Z"
+        },
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "MEMBER",
+          "body": "Closed with negligible delay ;)",
+          "createdAt": "2018-11-08T08:32:39Z",
+          "updatedAt": "2018-11-08T08:32:39Z"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "id": "MDU6SXNzdWUzMjc3MzgxNTk=",
+      "title": "Ensure cardinalities are in sync with ISO/IEC 19770-2",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/issues/4",
+      "state": "CLOSED",
+      "author": "david-waltermire-nist",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Some cardinalities are out-of-sync. These need to be reviewed and synced up.",
+      "createdAt": "2018-05-30T13:45:24Z",
+      "updatedAt": "2019-07-25T04:47:39Z",
+      "closedAt": "2019-07-25T04:47:39Z",
+      "comments": [
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "MEMBER",
+          "body": "Yes :-)\r\n\r\nhttp://standards.iso.org/iso/19770/-2/2015-current/schema.xsd,\r\nthe current ISO text,\r\nand the actual intend the ISO spec authors wanted to convey have to be assessed and aligned in the final draft.\r\n\r\nWe are close, but I might have introduced a \"wishful-thinking\" error wrt to payload & evidence quantities in the current CDDL.\r\n\r\nThe editors should resolve this as soon as possible and provide a candidate for final draft for the next meeting (102).",
+          "createdAt": "2018-06-07T23:49:04Z",
+          "updatedAt": "2018-06-07T23:49:04Z"
+        },
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "MEMBER",
+          "body": "Every obvious cardinality error seems to be fixed now.\r\n\r\nDid I miss something?",
+          "createdAt": "2018-06-08T15:34:52Z",
+          "updatedAt": "2018-06-08T15:34:52Z"
+        },
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "MEMBER",
+          "body": "Leaving this open to be closed at SACM WG session in BKK.",
+          "createdAt": "2018-11-08T08:31:32Z",
+          "updatedAt": "2018-11-08T08:31:32Z"
+        },
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "MEMBER",
+          "body": "Addressed",
+          "createdAt": "2019-07-25T04:47:39Z",
+          "updatedAt": "2019-07-25T04:47:39Z"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "MDU6SXNzdWUzMzA3MDczNzU=",
+      "title": "Express enumerations that are not defined in the current XSD but per nomartive text explictitly via cddl rules",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/issues/5",
+      "state": "CLOSED",
+      "author": "henkbirkholz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "There still might be a few cases left, where the value is text, but semantically it is a type-choice / enumeration. This should be double checked before meeting 102.",
+      "createdAt": "2018-06-08T15:37:57Z",
+      "updatedAt": "2019-07-25T04:46:51Z",
+      "closedAt": "2019-07-25T04:46:51Z",
+      "comments": [
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "MEMBER",
+          "body": "Used role (label 33) & rel (label 40) as proposal by example. The roles & rels type-choices still require an extension-point, I assume.\r\n\r\nmedia (label 10) is currently a text value with a semantic that is a tad bit more complex than a type-choice: \"EXPRESSION [[OPERATOR] [EXPRESSION] ... ]\", where EXPRESSION can be a simple type-choice.... or ... \"([PREFIX-]ENVIRONMENT.ATTRIBUTE:VALUE)\" ... and so on and on....\r\n\r\nI propose to deal with.... that in cddl, too. \r\n\r\nAlso, the definition of rel seems to be wrong at the moment, as every SWID enumeration is actually NOT defined in https://www.iana.org/assignments/link-relations/link-relations.xhtml\r\n\r\nThis needs fixing.",
+          "createdAt": "2018-06-08T16:02:16Z",
+          "updatedAt": "2018-06-08T16:02:16Z"
+        },
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "MEMBER",
+          "body": "Addressed (with the exception of https://github.com/sacmwg/draft-ietf-sacm-coswid/issues/6).\r\nLeaving this open to be closed at SACM WG session in BKK.",
+          "createdAt": "2018-11-08T08:30:57Z",
+          "updatedAt": "2018-11-08T08:30:57Z"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "id": "MDU6SXNzdWUzMzExODQ5MTA=",
+      "title": "Representation of media (label: 10)",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/issues/6",
+      "state": "CLOSED",
+      "author": "henkbirkholz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "The cddl now includes a proposal how to represent the semantics of the media attribute.\r\n\r\nOn one hand, I am fairly uncertain on how correct the proposal is. On the other hand, I am fairly certain that an SWID expert has to check this new cddl type.",
+      "createdAt": "2018-06-11T13:17:16Z",
+      "updatedAt": "2019-07-25T04:47:20Z",
+      "closedAt": "2019-07-25T04:47:19Z",
+      "comments": [
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "MEMBER",
+          "body": "Still open, resolve for WGLC",
+          "createdAt": "2018-11-08T08:29:35Z",
+          "updatedAt": "2018-11-08T08:29:35Z"
+        },
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "MEMBER",
+          "body": "Addressed",
+          "createdAt": "2019-07-25T04:47:19Z",
+          "updatedAt": "2019-07-25T04:47:19Z"
+        }
+      ]
+    }
+  ],
+  "pulls": [
+    {
+      "number": 2,
+      "id": "MDExOlB1bGxSZXF1ZXN0MTczMDA0Mjky",
+      "title": "Submitting the -04 draft revision",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/pull/2",
+      "state": "MERGED",
+      "author": "david-waltermire-nist",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Requesting changes posted as -04 be merged into this repo.",
+      "createdAt": "2018-03-05T22:23:28Z",
+      "updatedAt": "2018-03-05T22:23:40Z",
+      "closedAt": "2018-03-05T22:23:40Z",
+      "mergedAt": "2018-03-05T22:23:40Z",
+      "mergedBy": "david-waltermire-nist",
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 3,
+      "id": "MDExOlB1bGxSZXF1ZXN0MTc2NTc0Nzcy",
+      "title": "-05 revision",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/pull/3",
+      "state": "MERGED",
+      "author": "david-waltermire-nist",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Pulling the -05 revision.",
+      "createdAt": "2018-03-21T18:44:20Z",
+      "updatedAt": "2018-03-21T18:44:33Z",
+      "closedAt": "2018-03-21T18:44:33Z",
+      "mergedAt": "2018-03-21T18:44:33Z",
+      "mergedBy": "david-waltermire-nist",
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 7,
+      "id": "MDExOlB1bGxSZXF1ZXN0MjI4MTQ4Mjc1",
+      "title": "Additional edits to address remaining changes ",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/pull/7",
+      "state": "MERGED",
+      "author": "david-waltermire-nist",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "- Flagged firmware resource colletion appendix for revision\r\n- Made use of terminology more consistent\r\n- Better defined use of extension points in the CDDL\r\n- Added definitions for indexed values\r\n- Added IANA registry for Link use indexed values",
+      "createdAt": "2018-11-03T23:52:14Z",
+      "updatedAt": "2018-11-03T23:53:28Z",
+      "closedAt": "2018-11-03T23:53:27Z",
+      "mergedAt": "2018-11-03T23:53:27Z",
+      "mergedBy": "david-waltermire-nist",
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 8,
+      "id": "MDExOlB1bGxSZXF1ZXN0MjY4MDAwOTY4",
+      "title": "Added an IANA registry for CoSWID items supporting future extension.",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/pull/8",
+      "state": "MERGED",
+      "author": "david-waltermire-nist",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Cleaned up IANA registrations, fixing some inconsistencies in the table labels.\r\ndded additional CDDL sockets for resource collection entries providing for additional extension points to address future SWID/CoSWID extensions.\r\nUpdated section on extension points to address new CDDL sockets and to reference the new IANA registry for items.\r\nRemoved unused references and added new references to address placeholder comments.\r\nAlso:\r\n- Added changelog entries.\r\n- Updated inline CDDL.\r\n- Normalized use of links in the markdown.",
+      "createdAt": "2019-04-06T01:01:53Z",
+      "updatedAt": "2019-04-06T01:02:44Z",
+      "closedAt": "2019-04-06T01:02:44Z",
+      "mergedAt": "2019-04-06T01:02:44Z",
+      "mergedBy": "david-waltermire-nist",
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 9,
+      "id": "MDExOlB1bGxSZXF1ZXN0MjY4MDY5ODk4",
+      "title": "Added missing $$meta-extension socket and other minor changes to the \u2026",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/pull/9",
+      "state": "MERGED",
+      "author": "david-waltermire-nist",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "\u2026CDDL.\r\nPerformed a final editorial pass of the document, clarifying language, making term use more consistent, fixing references, and replacing lowercase RFC2119 keywords.\r\nAdded table with semantics for the link ownership item.",
+      "createdAt": "2019-04-06T23:31:38Z",
+      "updatedAt": "2019-04-06T23:32:09Z",
+      "closedAt": "2019-04-06T23:32:09Z",
+      "mergedAt": "2019-04-06T23:32:09Z",
+      "mergedBy": "david-waltermire-nist",
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 10,
+      "id": "MDExOlB1bGxSZXF1ZXN0MjY4NzI0ODIy",
+      "title": "Fixed an inconsistency between the index values of valid value lists \u2026",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/pull/10",
+      "state": "MERGED",
+      "author": "david-waltermire-nist",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "\u2026and the IANA registry.\r\n\r\nAlso fixed a wierd character encoding issue.",
+      "createdAt": "2019-04-09T12:52:17Z",
+      "updatedAt": "2019-04-09T12:52:42Z",
+      "closedAt": "2019-04-09T12:52:42Z",
+      "mergedAt": "2019-04-09T12:52:42Z",
+      "mergedBy": "david-waltermire-nist",
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 11,
+      "id": "MDExOlB1bGxSZXF1ZXN0MjkxMjY4NDEy",
+      "title": "Completed outstanding changes for -10",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/pull/11",
+      "state": "MERGED",
+      "author": "david-waltermire-nist",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2019-06-24T19:39:07Z",
+      "updatedAt": "2019-06-24T19:39:47Z",
+      "closedAt": "2019-06-24T19:39:47Z",
+      "mergedAt": "2019-06-24T19:39:47Z",
+      "mergedBy": "david-waltermire-nist",
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 12,
+      "id": "MDExOlB1bGxSZXF1ZXN0MjkyMjMwMDYw",
+      "title": "Addressed a bunch of editorial comments.",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/pull/12",
+      "state": "MERGED",
+      "author": "david-waltermire-nist",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2019-06-27T02:05:27Z",
+      "updatedAt": "2019-06-27T02:05:37Z",
+      "closedAt": "2019-06-27T02:05:37Z",
+      "mergedAt": "2019-06-27T02:05:37Z",
+      "mergedBy": "david-waltermire-nist",
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 13,
+      "id": "MDExOlB1bGxSZXF1ZXN0MzAwOTA3OTg0",
+      "title": "Addressed comments from WGLC reviewers.",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/pull/13",
+      "state": "MERGED",
+      "author": "david-waltermire-nist",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Addressed comments from Alex, Ira and Carsten.\r\n",
+      "createdAt": "2019-07-24T21:48:46Z",
+      "updatedAt": "2019-07-25T04:13:52Z",
+      "closedAt": "2019-07-25T04:13:52Z",
+      "mergedAt": "2019-07-25T04:13:52Z",
+      "mergedBy": "henkbirkholz",
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjY2MzUyMzYy",
+          "commit": {
+            "abbreviatedOid": "fe48345"
+          },
+          "author": "ajnelson-nist",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2019-07-25T00:42:35Z",
+          "updatedAt": "2019-07-25T00:42:36Z",
+          "comments": [
+            {
+              "originalPosition": 77,
+              "body": "This sentence needs a light grammar adjustment.",
+              "createdAt": "2019-07-25T00:42:35Z",
+              "updatedAt": "2019-07-25T00:42:36Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjY2MzUzMDk4",
+          "commit": {
+            "abbreviatedOid": "fe48345"
+          },
+          "author": "ajnelson-nist",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2019-07-25T00:45:59Z",
+          "updatedAt": "2019-07-25T00:46:00Z",
+          "comments": [
+            {
+              "originalPosition": 203,
+              "body": "Typo: separated.",
+              "createdAt": "2019-07-25T00:45:59Z",
+              "updatedAt": "2019-07-25T00:46:00Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjY2MzUzNTg2",
+          "commit": {
+            "abbreviatedOid": "fe48345"
+          },
+          "author": "ajnelson-nist",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2019-07-25T00:48:25Z",
+          "updatedAt": "2019-07-25T00:48:26Z",
+          "comments": [
+            {
+              "originalPosition": 493,
+              "body": "Typo: guidelines.",
+              "createdAt": "2019-07-25T00:48:25Z",
+              "updatedAt": "2019-07-25T00:48:26Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjY2MzUzOTMz",
+          "commit": {
+            "abbreviatedOid": "fe48345"
+          },
+          "author": "ajnelson-nist",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2019-07-25T00:50:10Z",
+          "updatedAt": "2019-07-25T00:50:10Z",
+          "comments": [
+            {
+              "originalPosition": 614,
+              "body": "Typo: \"the the\".",
+              "createdAt": "2019-07-25T00:50:10Z",
+              "updatedAt": "2019-07-25T00:50:10Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjY2MzU0Mzk1",
+          "commit": {
+            "abbreviatedOid": "fe48345"
+          },
+          "author": "ajnelson-nist",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2019-07-25T00:52:31Z",
+          "updatedAt": "2019-07-25T00:52:32Z",
+          "comments": [
+            {
+              "originalPosition": 635,
+              "body": "Typo? Dangling `o`.",
+              "createdAt": "2019-07-25T00:52:32Z",
+              "updatedAt": "2019-07-25T00:52:32Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjY2MzU0NDIz",
+          "commit": {
+            "abbreviatedOid": "fe48345"
+          },
+          "author": "ajnelson-nist",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2019-07-25T00:52:40Z",
+          "updatedAt": "2019-07-25T00:52:40Z",
+          "comments": [
+            {
+              "originalPosition": 631,
+              "body": "Typo: \"cnsidered\".",
+              "createdAt": "2019-07-25T00:52:40Z",
+              "updatedAt": "2019-07-25T00:52:40Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjY2MzU0NTI3",
+          "commit": {
+            "abbreviatedOid": "fe48345"
+          },
+          "author": "ajnelson-nist",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2019-07-25T00:53:14Z",
+          "updatedAt": "2019-07-25T00:53:15Z",
+          "comments": [
+            {
+              "originalPosition": 650,
+              "body": "Typo: \"greatful\".",
+              "createdAt": "2019-07-25T00:53:14Z",
+              "updatedAt": "2019-07-25T00:53:15Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjY2MzkxMzE4",
+          "commit": {
+            "abbreviatedOid": "fe48345"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2019-07-25T04:07:18Z",
+          "updatedAt": "2019-07-25T04:07:19Z",
+          "comments": [
+            {
+              "originalPosition": 77,
+              "body": "I think you are correct. Currently, I have a hard time parsing that myself. I'll merge this for now and keep this issue open.",
+              "createdAt": "2019-07-25T04:07:18Z",
+              "updatedAt": "2019-07-25T04:07:19Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjY2MzkyMzg2",
+          "commit": {
+            "abbreviatedOid": "fe48345"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "I agree with all of Alex's comments, which are not addressed by this current merge and have to be addressed after merging. There are some new rage definitions for values, e.g. -256 - 65536 (if I remember correctly) these can be include in the CDDL specification with controls.\r\n\r\nText improvement is significant and strongly accepted.",
+          "createdAt": "2019-07-25T04:12:52Z",
+          "updatedAt": "2019-07-25T04:12:52Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "id": "MDExOlB1bGxSZXF1ZXN0MzAxMTc2MDMw",
+      "title": "Added changelog notes",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/pull/14",
+      "state": "MERGED",
+      "author": "david-waltermire-nist",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2019-07-25T14:39:18Z",
+      "updatedAt": "2019-07-25T14:39:33Z",
+      "closedAt": "2019-07-25T14:39:33Z",
+      "mergedAt": "2019-07-25T14:39:33Z",
+      "mergedBy": "david-waltermire-nist",
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 15,
+      "id": "MDExOlB1bGxSZXF1ZXN0MzAxMzMzNDI1",
+      "title": "[WIP] Fixed WGLC issue on -12",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/pull/15",
+      "state": "MERGED",
+      "author": "david-waltermire-nist",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixed typo identified by Alex Nelson.\r\nAlso removed some extra working text that was accidentally left in an IANA section.\r\n\r\nThis PR will be kept open until the WGLC concludes.",
+      "createdAt": "2019-07-25T22:32:31Z",
+      "updatedAt": "2019-10-04T16:23:25Z",
+      "closedAt": "2019-10-04T16:23:25Z",
+      "mergedAt": "2019-10-04T16:23:25Z",
+      "mergedBy": "david-waltermire-nist",
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 16,
+      "id": "MDExOlB1bGxSZXF1ZXN0MzQxODI5NTA5",
+      "title": "Addressed comments from Kathleen Moriarty",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/pull/16",
+      "state": "MERGED",
+      "author": "david-waltermire-nist",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2019-11-17T07:46:10Z",
+      "updatedAt": "2019-11-17T07:54:13Z",
+      "closedAt": "2019-11-17T07:54:13Z",
+      "mergedAt": "2019-11-17T07:54:13Z",
+      "mergedBy": "david-waltermire-nist",
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 17,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDEyMTYxOTI0",
+      "title": "Adjustments to wrap WGLC",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/pull/17",
+      "state": "MERGED",
+      "author": "david-waltermire-nist",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixed validation issue with CoSWID CDDL, caused by duplicate definition of \"supplemental\".\r\nAdded \"maintainer\" to entity roles.\r\nFixed one instance of bad requirement text capitalization.\r\n\r\n",
+      "createdAt": "2020-05-01T14:53:41Z",
+      "updatedAt": "2020-05-01T14:54:07Z",
+      "closedAt": "2020-05-01T14:54:06Z",
+      "mergedAt": "2020-05-01T14:54:06Z",
+      "mergedBy": "david-waltermire-nist",
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}
