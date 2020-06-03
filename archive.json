@@ -1,6 +1,6 @@
 {
-  "magic": "B8n2c@e8kvfx",
-  "timestamp": "2020-05-01T14:59:00.635824+00:00",
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2020-06-03T17:33:34.157227+00:00",
   "repo": "sacmwg/draft-ietf-sacm-coswid",
   "labels": [
     {
@@ -177,6 +177,22 @@
           "updatedAt": "2019-07-25T04:47:19Z"
         }
       ]
+    },
+    {
+      "number": 18,
+      "id": "MDU6SXNzdWU2MTIzNDU2MzY=",
+      "title": "Floating-point dates",
+      "url": "https://github.com/sacmwg/draft-ietf-sacm-coswid/issues/18",
+      "state": "OPEN",
+      "author": "laurencelundblade",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "In 2.9.4.  The evidence-entry Map, there is a reference to CDDL \"time\", which by RFC8610 is an int or a float.  The only advantage of float for human time scales is fractions of seconds, and there is burden to support float.",
+      "createdAt": "2020-05-05T05:20:00Z",
+      "updatedAt": "2020-05-05T05:20:00Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -197,7 +213,16 @@
       "mergedAt": "2018-03-05T22:23:40Z",
       "mergedBy": "david-waltermire-nist",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "sacmwg/draft-ietf-sacm-coswid",
+      "baseRefName": "master",
+      "baseRefOid": "3a2162caa950f2f5ea775ce65ce12be3a67392d1",
+      "headRepository": "david-waltermire-nist/draft-ietf-sacm-coswid",
+      "headRefName": "working",
+      "headRefOid": "86e3414f68e7d26f394a42d3786a4a0a6de9fb22",
+      "mergeCommit": {
+        "oid": "329e1a8b175316a86e88750dac1bbf6a3b3cbfa9"
+      }
     },
     {
       "number": 3,
@@ -216,7 +241,16 @@
       "mergedAt": "2018-03-21T18:44:33Z",
       "mergedBy": "david-waltermire-nist",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "sacmwg/draft-ietf-sacm-coswid",
+      "baseRefName": "master",
+      "baseRefOid": "53b74298faa105481ecb3bf0c8535cdee30c5ac3",
+      "headRepository": "david-waltermire-nist/draft-ietf-sacm-coswid",
+      "headRefName": "master",
+      "headRefOid": "48800a233b48fde1666255de0189bb76d8da27ac",
+      "mergeCommit": {
+        "oid": "ac0f37743d6a805eb8b4f91a0b9c9f13fc44be4e"
+      }
     },
     {
       "number": 7,
@@ -235,7 +269,16 @@
       "mergedAt": "2018-11-03T23:53:27Z",
       "mergedBy": "david-waltermire-nist",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "sacmwg/draft-ietf-sacm-coswid",
+      "baseRefName": "master",
+      "baseRefOid": "c833c134db3e1cd1ba9e1232855cf27e82b3813f",
+      "headRepository": "david-waltermire-nist/draft-ietf-sacm-coswid",
+      "headRefName": "master",
+      "headRefOid": "59e5494b4dee149031a41f6d9c34f4740c45b9ce",
+      "mergeCommit": {
+        "oid": "655d8cc2e5d6d8974b853bf601caae961a0cd717"
+      }
     },
     {
       "number": 8,
@@ -254,7 +297,16 @@
       "mergedAt": "2019-04-06T01:02:44Z",
       "mergedBy": "david-waltermire-nist",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "sacmwg/draft-ietf-sacm-coswid",
+      "baseRefName": "master",
+      "baseRefOid": "2ffa54df1e4ca12ca57196858d94b22d438426b3",
+      "headRepository": "david-waltermire-nist/draft-ietf-sacm-coswid",
+      "headRefName": "master",
+      "headRefOid": "5733a129390bd8bba8d4717710d762dbd6031544",
+      "mergeCommit": {
+        "oid": "c36a7e7cee4af99a55fda002642f0ab8996e364e"
+      }
     },
     {
       "number": 9,
@@ -273,7 +325,16 @@
       "mergedAt": "2019-04-06T23:32:09Z",
       "mergedBy": "david-waltermire-nist",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "sacmwg/draft-ietf-sacm-coswid",
+      "baseRefName": "master",
+      "baseRefOid": "c36a7e7cee4af99a55fda002642f0ab8996e364e",
+      "headRepository": "david-waltermire-nist/draft-ietf-sacm-coswid",
+      "headRefName": "master",
+      "headRefOid": "f1f4dc400e56a66f16548ceba6d3a84005927126",
+      "mergeCommit": {
+        "oid": "056def505f7eb2460746af506e5df9082f01bbc3"
+      }
     },
     {
       "number": 10,
@@ -292,7 +353,16 @@
       "mergedAt": "2019-04-09T12:52:42Z",
       "mergedBy": "david-waltermire-nist",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "sacmwg/draft-ietf-sacm-coswid",
+      "baseRefName": "master",
+      "baseRefOid": "056def505f7eb2460746af506e5df9082f01bbc3",
+      "headRepository": "david-waltermire-nist/draft-ietf-sacm-coswid",
+      "headRefName": "master",
+      "headRefOid": "5de78d3fdc3e855f0c28a225ff0a02d59a823a4d",
+      "mergeCommit": {
+        "oid": "1ef0e2442262d6542cc50c5e02733e61a4c4d2de"
+      }
     },
     {
       "number": 11,
@@ -311,7 +381,16 @@
       "mergedAt": "2019-06-24T19:39:47Z",
       "mergedBy": "david-waltermire-nist",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "sacmwg/draft-ietf-sacm-coswid",
+      "baseRefName": "master",
+      "baseRefOid": "c0bb43f1e69505cc9167e34881aa1797f6fdf099",
+      "headRepository": "david-waltermire-nist/draft-ietf-sacm-coswid",
+      "headRefName": "master",
+      "headRefOid": "c349505cbe94fe9eb5a91c28e53144c52e921cbc",
+      "mergeCommit": {
+        "oid": "084a5fa4d4709308e501b705f419542cef92a4e6"
+      }
     },
     {
       "number": 12,
@@ -330,7 +409,16 @@
       "mergedAt": "2019-06-27T02:05:37Z",
       "mergedBy": "david-waltermire-nist",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "sacmwg/draft-ietf-sacm-coswid",
+      "baseRefName": "master",
+      "baseRefOid": "084a5fa4d4709308e501b705f419542cef92a4e6",
+      "headRepository": "david-waltermire-nist/draft-ietf-sacm-coswid",
+      "headRefName": "master",
+      "headRefOid": "f2240341eb3f90ddb87906e93985619b3046ed3e",
+      "mergeCommit": {
+        "oid": "24221ee83ac34710d29ff5191ffd66e6d8abb10c"
+      }
     },
     {
       "number": 13,
@@ -523,7 +611,16 @@
           "updatedAt": "2019-07-25T04:12:52Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "sacmwg/draft-ietf-sacm-coswid",
+      "baseRefName": "master",
+      "baseRefOid": "24221ee83ac34710d29ff5191ffd66e6d8abb10c",
+      "headRepository": "david-waltermire-nist/draft-ietf-sacm-coswid",
+      "headRefName": "master",
+      "headRefOid": "fe48345500c5109c062fc2920d81563499af8566",
+      "mergeCommit": {
+        "oid": "c4eb5d15c01c45a9f4351ba9ce5d439ae4b9a849"
+      }
     },
     {
       "number": 14,
@@ -542,7 +639,16 @@
       "mergedAt": "2019-07-25T14:39:33Z",
       "mergedBy": "david-waltermire-nist",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "sacmwg/draft-ietf-sacm-coswid",
+      "baseRefName": "master",
+      "baseRefOid": "039e575a3bd9d48389b7fc483f884c7ec6903da5",
+      "headRepository": "david-waltermire-nist/draft-ietf-sacm-coswid",
+      "headRefName": "master",
+      "headRefOid": "3d35d9497924517fda76614668b3940a241bbaeb",
+      "mergeCommit": {
+        "oid": "0042ae446656f75ce82876bb84ea7973ec49e7c4"
+      }
     },
     {
       "number": 15,
@@ -561,7 +667,16 @@
       "mergedAt": "2019-10-04T16:23:25Z",
       "mergedBy": "david-waltermire-nist",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "sacmwg/draft-ietf-sacm-coswid",
+      "baseRefName": "master",
+      "baseRefOid": "0042ae446656f75ce82876bb84ea7973ec49e7c4",
+      "headRepository": "david-waltermire-nist/draft-ietf-sacm-coswid",
+      "headRefName": "master",
+      "headRefOid": "49f8cab753c4747f17e71b65bc9a5310b716bdf9",
+      "mergeCommit": {
+        "oid": "14a8d6307e9317e4f2b1abe8291575ba36781956"
+      }
     },
     {
       "number": 16,
@@ -580,7 +695,16 @@
       "mergedAt": "2019-11-17T07:54:13Z",
       "mergedBy": "david-waltermire-nist",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "sacmwg/draft-ietf-sacm-coswid",
+      "baseRefName": "master",
+      "baseRefOid": "14a8d6307e9317e4f2b1abe8291575ba36781956",
+      "headRepository": "david-waltermire-nist/draft-ietf-sacm-coswid",
+      "headRefName": "master",
+      "headRefOid": "8b81ec559d1516ce5f8d0be13fe55cc654d77036",
+      "mergeCommit": {
+        "oid": "938f952bd00e09c918d8078e1b89eb0d2768cdde"
+      }
     },
     {
       "number": 17,
@@ -599,7 +723,16 @@
       "mergedAt": "2020-05-01T14:54:06Z",
       "mergedBy": "david-waltermire-nist",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "sacmwg/draft-ietf-sacm-coswid",
+      "baseRefName": "master",
+      "baseRefOid": "108bd9c8cf298b64a91a05361d5da4a37f97947d",
+      "headRepository": "david-waltermire-nist/draft-ietf-sacm-coswid",
+      "headRefName": "master",
+      "headRefOid": "fc9f48d315689470435fc7f9ef317e996cabbff5",
+      "mergeCommit": {
+        "oid": "430b14eb62c1724e778fe2cea0093318423bdeec"
+      }
     }
   ]
 }
