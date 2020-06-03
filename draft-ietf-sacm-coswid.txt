@@ -1697,7 +1697,7 @@ Internet-Draft                   CoSWID                        June 2020
    corresponding CBOR message MUST adhere to the following CDDL
    specification.
 
-   <CODE START>
+   <CODE BEGINS>
    concise-swid-tag = {
      global-attributes,
      tag-id => text / bstr .size 16,
@@ -2018,7 +2018,7 @@ Birkholz, et al.         Expires 5 December 2020               [Page 36]
 Internet-Draft                   CoSWID                        June 2020
 
 
-   <CODE END>
+   <CODE ENDS>
 
 3.  Determining the Type of CoSWID
 
