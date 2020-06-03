@@ -5,12 +5,12 @@
 SACM Working Group                                           H. Birkholz
 Internet-Draft                                            Fraunhofer SIT
 Intended status: Standards Track                     J. Fitzgerald-McKay
-Expires: 1 November 2020                           Department of Defense
+Expires: 5 December 2020                           Department of Defense
                                                               C. Schmidt
                                                    The MITRE Corporation
                                                            D. Waltermire
                                                                     NIST
-                                                           30 April 2020
+                                                             3 June 2020
 
 
                   Concise Software Identification Tags
@@ -43,7 +43,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 November 2020.
+   This Internet-Draft will expire on 5 December 2020.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Birkholz, et al.         Expires 1 November 2020                [Page 1]
+Birkholz, et al.         Expires 5 December 2020                [Page 1]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -79,56 +79,56 @@ Table of Contents
      2.3.  The concise-swid-tag Map  . . . . . . . . . . . . . . . .  11
      2.4.  concise-swid-tag Co-constraints . . . . . . . . . . . . .  15
      2.5.  The global-attributes Group . . . . . . . . . . . . . . .  16
-     2.6.  The entity-entry Map  . . . . . . . . . . . . . . . . . .  17
+     2.6.  The entity-entry Map  . . . . . . . . . . . . . . . . . .  16
      2.7.  The link-entry Map  . . . . . . . . . . . . . . . . . . .  18
-     2.8.  The software-meta-entry Map . . . . . . . . . . . . . . .  22
+     2.8.  The software-meta-entry Map . . . . . . . . . . . . . . .  23
      2.9.  The Resource Collection Definition  . . . . . . . . . . .  26
        2.9.1.  The hash-entry Array  . . . . . . . . . . . . . . . .  26
        2.9.2.  The resource-collection Group . . . . . . . . . . . .  26
-       2.9.3.  The payload-entry Map . . . . . . . . . . . . . . . .  29
+       2.9.3.  The payload-entry Map . . . . . . . . . . . . . . . .  30
        2.9.4.  The evidence-entry Map  . . . . . . . . . . . . . . .  30
-     2.10. Full CDDL Definition  . . . . . . . . . . . . . . . . . .  30
-   3.  Determining the Type of CoSWID  . . . . . . . . . . . . . . .  36
+     2.10. Full CDDL Specification . . . . . . . . . . . . . . . . .  31
+   3.  Determining the Type of CoSWID  . . . . . . . . . . . . . . .  37
    4.  CoSWID Indexed Label Values . . . . . . . . . . . . . . . . .  37
      4.1.  Version Scheme  . . . . . . . . . . . . . . . . . . . . .  37
-     4.2.  Entity Role Values  . . . . . . . . . . . . . . . . . . .  38
-     4.3.  Link Ownership Values . . . . . . . . . . . . . . . . . .  40
-     4.4.  Link Rel Values . . . . . . . . . . . . . . . . . . . . .  40
-     4.5.  Link Use Values . . . . . . . . . . . . . . . . . . . . .  42
-   5.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  43
-     5.1.  CoSWID Items Registry . . . . . . . . . . . . . . . . . .  43
-     5.2.  SWID/CoSWID Value Registries  . . . . . . . . . . . . . .  46
-       5.2.1.  Registration Proceedures  . . . . . . . . . . . . . .  46
-       5.2.2.  Private Use of Index and Name Values  . . . . . . . .  47
-       5.2.3.  Expert Review Guidelines  . . . . . . . . . . . . . .  47
-       5.2.4.  SWID/CoSWID Version Scheme Value Registry . . . . . .  48
-       5.2.5.  SWID/CoSWID Entity Role Value Registry  . . . . . . .  49
-       5.2.6.  SWID/CoSWID Link Ownership Value Registry . . . . . .  50
-       5.2.7.  SWID/CoSWID Link Relationship Value Registry  . . . .  52
-       5.2.8.  SWID/CoSWID Link Use Value Registry . . . . . . . . .  53
+     4.2.  Entity Role Values  . . . . . . . . . . . . . . . . . . .  39
+     4.3.  Link Ownership Values . . . . . . . . . . . . . . . . . .  41
+     4.4.  Link Rel Values . . . . . . . . . . . . . . . . . . . . .  42
+     4.5.  Link Use Values . . . . . . . . . . . . . . . . . . . . .  44
+   5.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  44
+     5.1.  CoSWID Items Registry . . . . . . . . . . . . . . . . . .  44
+     5.2.  SWID/CoSWID Value Registries  . . . . . . . . . . . . . .  47
+       5.2.1.  Registration Proceedures  . . . . . . . . . . . . . .  48
+       5.2.2.  Private Use of Index and Name Values  . . . . . . . .  48
+       5.2.3.  Expert Review Guidelines  . . . . . . . . . . . . . .  48
+       5.2.4.  SWID/CoSWID Version Scheme Value Registry . . . . . .  49
+       5.2.5.  SWID/CoSWID Entity Role Value Registry  . . . . . . .  50
+       5.2.6.  SWID/CoSWID Link Ownership Value Registry . . . . . .  52
+       5.2.7.  SWID/CoSWID Link Relationship Value Registry  . . . .  53
+       5.2.8.  SWID/CoSWID Link Use Value Registry . . . . . . . . .  54
 
 
 
-Birkholz, et al.         Expires 1 November 2020                [Page 2]
+Birkholz, et al.         Expires 5 December 2020                [Page 2]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
-     5.3.  swid+cbor Media Type Registration . . . . . . . . . . . .  54
-     5.4.  CoAP Content-Format Registration  . . . . . . . . . . . .  56
-     5.5.  CBOR Tag Registration . . . . . . . . . . . . . . . . . .  56
-     5.6.  URI Scheme Registrations  . . . . . . . . . . . . . . . .  56
-       5.6.1.  "swid" URI Scheme Registration  . . . . . . . . . . .  56
-       5.6.2.  "swidpath" URI Scheme Registration  . . . . . . . . .  57
-     5.7.  CoSWID Model for use in SWIMA Registration  . . . . . . .  58
-   6.  Security Considerations . . . . . . . . . . . . . . . . . . .  59
-   7.  Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .  60
-   8.  Change Log  . . . . . . . . . . . . . . . . . . . . . . . . .  60
-   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  65
-     9.1.  Normative References  . . . . . . . . . . . . . . . . . .  65
-     9.2.  Informative References  . . . . . . . . . . . . . . . . .  67
-   Appendix A.  Signed Concise SWID Tags using COSE  . . . . . . . .  68
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  69
+     5.3.  swid+cbor Media Type Registration . . . . . . . . . . . .  55
+     5.4.  CoAP Content-Format Registration  . . . . . . . . . . . .  57
+     5.5.  CBOR Tag Registration . . . . . . . . . . . . . . . . . .  57
+     5.6.  URI Scheme Registrations  . . . . . . . . . . . . . . . .  57
+       5.6.1.  "swid" URI Scheme Registration  . . . . . . . . . . .  57
+       5.6.2.  "swidpath" URI Scheme Registration  . . . . . . . . .  58
+     5.7.  CoSWID Model for use in SWIMA Registration  . . . . . . .  59
+   6.  Security Considerations . . . . . . . . . . . . . . . . . . .  60
+   7.  Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .  61
+   8.  Change Log  . . . . . . . . . . . . . . . . . . . . . . . . .  62
+   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  67
+     9.1.  Normative References  . . . . . . . . . . . . . . . . . .  67
+     9.2.  Informative References  . . . . . . . . . . . . . . . . .  69
+   Appendix A.  Signed Concise SWID Tags using COSE  . . . . . . . .  70
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  71
 
 1.  Introduction
 
@@ -165,9 +165,9 @@ Internet-Draft                   CoSWID                       April 2020
 
 
 
-Birkholz, et al.         Expires 1 November 2020                [Page 3]
+Birkholz, et al.         Expires 5 December 2020                [Page 3]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
    scenarios, such as those described earlier, can cause a large amount
@@ -221,9 +221,9 @@ Internet-Draft                   CoSWID                       April 2020
 
 
 
-Birkholz, et al.         Expires 1 November 2020                [Page 4]
+Birkholz, et al.         Expires 5 December 2020                [Page 4]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
    4.  Supplemental Tag - A SWID or CoSWID tag that allows additional
@@ -277,9 +277,9 @@ Internet-Draft                   CoSWID                       April 2020
 
 
 
-Birkholz, et al.         Expires 1 November 2020                [Page 5]
+Birkholz, et al.         Expires 5 December 2020                [Page 5]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
       -  Software Installation.  A primary tag will be installed with
@@ -333,9 +333,9 @@ Internet-Draft                   CoSWID                       April 2020
 
 
 
-Birkholz, et al.         Expires 1 November 2020                [Page 6]
+Birkholz, et al.         Expires 5 December 2020                [Page 6]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
 1.2.  Concise SWID Format
@@ -353,11 +353,11 @@ Internet-Draft                   CoSWID                       April 2020
    representation includes every SWID tag field and attribute.
 
    The vocabulary, i.e., the CDDL names of the types and members used in
-   the CoSWID data definition, are mapped to more concise labels
-   represented as small integer values.  The names used in the CDDL data
-   definition and the mapping to the CBOR representation using integer
-   labels is based on the vocabulary of the XML attribute and element
-   names defined in ISO/IEC 19770-2:2015.
+   the CoSWID CDDL specification, are mapped to more concise labels
+   represented as small integer values (indices).  The names used in the
+   CDDL specification and the mapping to the CBOR representation using
+   integer indices is based on the vocabulary of the XML attribute and
+   element names defined in ISO/IEC 19770-2:2015.
 
 1.3.  Requirements Notation
 
@@ -371,27 +371,27 @@ Internet-Draft                   CoSWID                       April 2020
 
    The following describes the general rules and processes for encoding
    data using CDDL representation.  Prior familiarity with CBOR and CDDL
-   concepts will be helpful in understanding this CoSWID data
-   definition.
+   concepts will be helpful in understanding this CoSWID specification.
 
    This section describes the rules by which SWID tag XML is represented
    in the CoSWID CDDL structure.  The CamelCase [CamelCase] notation
    used in the XML schema definition is changed to a hyphen-separated
    notation [KebabCase] (e.g.  ResourceCollection is named resource-
-   collection) in the CoSWID data definition.  This deviation from the
-   original notation used in the XML representation reduces ambiguity
-   when referencing certain attributes in corresponding textual
-   descriptions.  An attribute referred to by its name in CamelCase
-   notation explicitly relates to XML SWID tags; an attribute referred
-   to by its name in KebabCase notation explicitly relates to CBOR
-   CoSWID tags.  This approach simplifies the composition of further
-   work that reference both XML SWID and CBOR CoSWID documents.
+   collection) in the CoSWID CDDL specification.  This deviation from
+   the original notation used in the XML representation reduces
+   ambiguity when referencing certain attributes in corresponding
+   textual descriptions.  An attribute referred to by its name in
+   CamelCase notation explicitly relates to XML SWID tags; an attribute
+   referred to by its name in KebabCase notation explicitly relates to
+   CBOR CoSWID tags.  This approach simplifies the composition of
+   further work that reference both XML SWID and CBOR CoSWID documents.
 
 
 
-Birkholz, et al.         Expires 1 November 2020                [Page 7]
+
+Birkholz, et al.         Expires 5 December 2020                [Page 7]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
    In most cases, mapping attribute names between SWID and CoSWID can be
@@ -415,15 +415,15 @@ Internet-Draft                   CoSWID                       April 2020
    the array's length or stop point (see [RFC7049]).  To make items that
    support 1 or more values, the following CDDL notion is used.
 
-   _name_ = (_label_: _data_ / [ 2* _data_ ])
+   _name_ = (_label_ => _data_ / [ 2* _data_ ])
 
    The CDDL rule above allows either a single data item or an array of 2
    or more data values to be provided.  When a singleton data value is
    provided, the CBOR markers for the array, array length, and stop
    point are not needed, saving bytes.  When two or more data values are
    provided, these values are encoded as an array.  This modeling
-   pattern is used frequently in the CoSWID CDDL data definition to
-   allow for more efficient encoding of singleton values.
+   pattern is used frequently in the CoSWID CDDL specification to allow
+   for more efficient encoding of singleton values.
 
    The following subsections describe the different parts of the CoSWID
    model.
@@ -439,32 +439,34 @@ Internet-Draft                   CoSWID                       April 2020
    and exchanged interoperably, text strings in CoSWID MUST be encoded
    consistent with the Net-Unicode definition defined in [RFC5198].
 
+
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020                [Page 8]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    All names registered with IANA according to requirements in section
    Section 5.2 also need to be valid according to the XML Schema NMToken
    data type (see [W3C.REC-xmlschema-2-20041028] section 3.3.4) to
-
-
-
-Birkholz, et al.         Expires 1 November 2020                [Page 8]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    ensure compatibility with the SWID specification where these names
    are used.
 
 2.2.  Concise SWID Extensions
 
-   The CoSWID data definition contains two features that are not
-   included in the SWID data definition on which it is based.  These
-   features are:
+   The CoSWID specification contains two features that are not included
+   in the SWID specification on which it is based.  These features are:
 
    *  The explicit definition of types for some attributes in the ISO-
       19770-2:2015 XML representation that are typically represented by
       the "any attribute" in the SWID model.  These are covered in
       Section 2.5.
 
-   *  The inclusion of extension points in the CoSWID data definition
+   *  The inclusion of extension points in the CoSWID specification
       using CDDL sockets (see [RFC8610] section 3.9).  The use of CDDL
       sockets allow for well-formed extensions to be defined in
       supplementary CDDL descriptions that support additional uses of
@@ -499,11 +501,9 @@ Internet-Draft                   CoSWID                       April 2020
 
 
 
-
-
-Birkholz, et al.         Expires 1 November 2020                [Page 9]
+Birkholz, et al.         Expires 5 December 2020                [Page 9]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
     +---------------------+---------------------------+---------------+
@@ -542,7 +542,7 @@ Internet-Draft                   CoSWID                       April 2020
 
    The following additional CDDL sockets are defined in this document to
    allow for adding new values to corresponding type-choices (i.e. to
-   represent enumerations) via custom CDDL data definitions.
+   represent enumerations) via custom CDDL specifications.
 
 
 
@@ -557,9 +557,9 @@ Internet-Draft                   CoSWID                       April 2020
 
 
 
-Birkholz, et al.         Expires 1 November 2020               [Page 10]
+Birkholz, et al.         Expires 5 December 2020               [Page 10]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
            +------------------+-----------------+-------------+
@@ -590,33 +590,9 @@ Internet-Draft                   CoSWID                       April 2020
 
 2.3.  The concise-swid-tag Map
 
-   The CDDL data definition for the root concise-swid-tag map is as
+   The CDDL specification for the root concise-swid-tag map is as
    follows and this rule and its constraints MUST be followed when
    creating or validating a CoSWID tag:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 11]
-
-Internet-Draft                   CoSWID                       April 2020
-
 
    concise-swid-tag = {
      global-attributes,
@@ -629,12 +605,25 @@ Internet-Draft                   CoSWID                       April 2020
      ? software-version => text,
      ? version-scheme => $version-scheme,
      ? media => text,
-     ? software-meta =>  software-meta-entry / [ 2* software-meta-entry ],
+     ? software-meta => software-meta-entry / [ 2* software-meta-entry ],
      entity => entity-entry / [ 2* entity-entry ],
      ? link => link-entry / [ 2* link-entry ],
-     ? (( payload => payload-entry ) // ( evidence => evidence-entry )),
-     * $$coswid-extension
+     ? payload-or-evidence,
+     * $$coswid-extension,
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 11]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    }
+
+   payload-or-evidence //= ( payload => payload-entry ] )
+   payload-or-evidence //= ( payload => [ 2* payload-entry )
+   payload-or-evidence //= ( evidence => evidence-entry )
+   payload-or-evidence //= ( evidence => [ 2* evidence-entry ] )
 
    tag-id = 0
    software-name = 1
@@ -665,18 +654,25 @@ Internet-Draft                   CoSWID                       April 2020
 
    The following describes each member of the concise-swid-tag root map.
 
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 12]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    *  global-attributes: A list of items including an optional language
       definition to support the processing of text-string values and an
       unbounded set of any-attribute items.  Described in Section 2.5.
+
+
+
+
+
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 12]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    *  tag-id (index 0): A 16 byte binary string or textual identifier
       uniquely referencing a software component.  The tag identifier
@@ -722,16 +718,17 @@ Internet-Draft                   CoSWID                       April 2020
       the correct course of action would be to replace the previous
       primary tag for the component with a new primary tag that
       reflected this new version.  In such a case, the new tag would
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 13]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
       have a patch item value of "false" or would omit this item
       completely.
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 13]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    *  supplemental (index 11): A boolean value that indicates if the tag
       is providing additional information to be associated with another
@@ -778,16 +775,16 @@ Internet-Draft                   CoSWID                       April 2020
 
    *  entity (index 2): Provides information about one or more
       organizations responsible for producing the CoSWID tag, and
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 14]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
       producing or releasing the software component referenced by this
       CoSWID tag.  Described in Section 2.6.
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 14]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    *  link (index 4): Provides a means to establish relationship arcs
       between the tag and another items.  A given link can be used to
@@ -833,19 +830,17 @@ Internet-Draft                   CoSWID                       April 2020
       item value of "patches" and an href item specifying an association
       with the software that was patched.
 
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 15]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    *  If the supplemental item is set to "true", the tag SHOULD contain
       at least one link item with both the rel item value of
       "supplemental" and an href item specifying an association with the
       software that is supplemented.
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 15]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    *  If all of the corpus, patch, and supplemental items are "false",
       or if the corpus item is set to "true", then a software-version
@@ -886,21 +881,22 @@ Internet-Draft                   CoSWID                       April 2020
       specified language.
 
    *  any-attribute: This sub-group provides a means to include
-      arbitrary information via label ("key") value pairs.  Labels can
-      be either a single integer or text string.  Values can be a single
-      integer, a text string, or an array of integers or text strings.
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 16]
-
-Internet-Draft                   CoSWID                       April 2020
-
+      arbitrary information via label/index ("key") value pairs.  Labels
+      can be either a single integer or text string.  Values can be a
+      single integer, a text string, or an array of integers or text
+      strings.
 
 2.6.  The entity-entry Map
 
    The CDDL for the entity-entry map follows:
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 16]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    entity-entry = {
      global-attributes,
@@ -921,12 +917,14 @@ Internet-Draft                   CoSWID                       April 2020
    $role /= aggregator
    $role /= distributor
    $role /= licensor
+   $role /= maintainer
    $role /= uint / text
    tag-creator=1
    software-creator=2
    aggregator=3
    distributor=4
    licensor=5
+   maintainer=6
 
    The following describes each child item of this group.
 
@@ -945,18 +943,17 @@ Internet-Draft                   CoSWID                       April 2020
       organization.  In a given scope, the registration id MUST be used
       consistently for CoSWID tag production.
 
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 17]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    *  role (index 33): An integer or textual value representing the
       relationship(s) between the entity, and this tag or the referenced
       software component.  If an integer value is used it MUST be an
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 17]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
       index value in the range -256 to 255.  Integer values in the range
       -256 to -1 are reserved for testing and use in closed environments
       (see section Section 5.2.2).  Integer values in the range 0 to 255
@@ -998,18 +995,6 @@ Internet-Draft                   CoSWID                       April 2020
 
    The CDDL for the link-entry map follows:
 
-
-
-
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 18]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    link-entry = {
      global-attributes,
      ? artifact => text,
@@ -1017,6 +1002,14 @@ Internet-Draft                   CoSWID                       April 2020
      ? media => text,
      ? ownership => $ownership,
      rel => $rel,
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 18]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
      ? media-type => text,
      ? use => $use,
      * $$link-extension,
@@ -1058,14 +1051,6 @@ Internet-Draft                   CoSWID                       April 2020
    parent=6
    patches=7
    requires=8
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 19]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    see-also=9
    supersedes=10
    supplemental=11
@@ -1073,6 +1058,14 @@ Internet-Draft                   CoSWID                       April 2020
    $use /= optional
    $use /= required
    $use /= recommended
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 19]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    $use /= uint / text
    optional=1
    required=2
@@ -1114,19 +1107,20 @@ Internet-Draft                   CoSWID                       April 2020
          that can lookup other CoSWID tags and select the appropriate
          tag based on an XPATH query [W3C.REC-xpath20-20101214].
 
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 20]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
          Examples include:
 
          o  swidpath://SoftwareIdentity[Entity/@regid='http://contoso.co
             m'] would retrieve all SWID or CoSWID tags that include an
             entity where the regid is "Contoso"
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 20]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
          o  swidpath://SoftwareIdentity[Meta/@persistentId='b0c55172-38e
             9-4e36-be86-92206ad8eddb'] would match all SWID or CoSWID
@@ -1155,6 +1149,35 @@ Internet-Draft                   CoSWID                       April 2020
       used, as these values are less concise than their index value
       equivalent.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 21]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    *  rel (index 40): An integer or textual value that identifies the
       relationship between this CoSWID and the target resource
       identified by the "href" item.  If an integer value is used it
@@ -1170,14 +1193,6 @@ Internet-Draft                   CoSWID                       April 2020
       relations.xhtml as defined by [RFC8288].  When a string value
       defined in the IANA "SWID/CoSWID Link Relationship Value" registry
       matches a Relation Name defined in the IANA "Link Relation Types"
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 21]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
       registry, the index value in the IANA "SWID/CoSWID Link
       Relationship Value" registry MUST be used instead, as this
       relationship has a specialized meaning in the context of a SWID/
@@ -1210,29 +1225,18 @@ Internet-Draft                   CoSWID                       April 2020
    *  $$link-extension: This CDDL socket can be used to extend the link-
       entry map model.  See Section 2.2.
 
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 22]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
 2.8.  The software-meta-entry Map
 
    The CDDL for the software-meta-entry map follows:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 22]
-
-Internet-Draft                   CoSWID                       April 2020
-
 
    software-meta-entry = {
      global-attributes,
@@ -1278,17 +1282,18 @@ Internet-Draft                   CoSWID                       April 2020
    *  activation-status (index 43): A textual value that identifies how
       the software component has been activated, which might relate to
       specific terms and conditions for its use (e.g.  Trial,
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 23]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
       Serialized, Licensed, Unlicensed, etc) and relate to an
       entitlement.  This attribute is typically used in supplemental
       tags as it contains information that might be selected during a
       specific install.
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 23]
-
-Internet-Draft                   CoSWID                       April 2020
-
 
    *  channel-type (index 44): A textual value that identfies which
       sales, licensing, or marketing channel the software component has
@@ -1324,6 +1329,23 @@ Internet-Draft                   CoSWID                       April 2020
       used to determine if accompanying proof of entitlement is needed
       when a software license reconciliation process is performed.
 
+
+
+
+
+
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 24]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    *  entitlement-key (index 49): A vendor-specific textual key that can
       be used to identify and establish a relationship to an
       entitlement.  Examples of an entitlement-key might include a
@@ -1337,15 +1359,6 @@ Internet-Draft                   CoSWID                       April 2020
 
    *  generator (index 50): The name (or tag-id) of the software
       component that created the CoSWID tag.  If the generating software
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 24]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
       component has a SWID or CoSWID tag, then the tag-id for the
       generating software component SHOULD be provided.
 
@@ -1381,6 +1394,14 @@ Internet-Draft                   CoSWID                       April 2020
       that differs from the specific exact version value specified by
       software-version.  Examples can include SP1, RC1, Beta, etc.
 
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 25]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    *  summary (index 55): A short description of the software component.
       This MUST be a single sentence suitable for display in a user
       interface.
@@ -1395,20 +1416,14 @@ Internet-Draft                   CoSWID                       April 2020
    *  $$meta-extension: This CDDL socket can be used to extend the
       software-meta-entry group model.  See Section 2.2.
 
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 25]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
 2.9.  The Resource Collection Definition
 
 2.9.1.  The hash-entry Array
 
    CoSWID adds explicit support for the representation of hash entries
    using algorithms that are registered in the IANA "Named Information
-   Hash Algorithm Registry" using the hash-entry member (label 58).
+   Hash Algorithm Registry" using the hash member (index 7) and the
+   corresponding hash-entry type.
 
    hash-entry = [
      hash-alg-id: int,
@@ -1432,14 +1447,25 @@ Internet-Draft                   CoSWID                       April 2020
 
    The CDDL for the resource-collection group follows:
 
-   path-elements-group = ( ? directory => directory / [ 2* directory-entry ],
+
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 26]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
+   path-elements-group = ( ? directory => directory-entry / [ 2* directory-entry ],
                            ? file => file-entry / [ 2* file-entry ],
                          )
 
-   esource-collection = (
+   resource-collection = (
      path-elements-group,
      ? process => process-entry / [ 2* process-entry ],
-     ? resource => resource-entry /[ 2* resource-entry ],
+     ? resource => resource-entry / [ 2* resource-entry ],
      * $$resource-collection-extension,
    )
 
@@ -1451,42 +1477,43 @@ Internet-Draft                   CoSWID                       April 2020
      ? root => text,
    )
 
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 26]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    file-entry = {
      filesystem-item,
      ? size => integer,
      ? file-version => text,
      ? hash => hash-entry,
-     * $$file-extension
+     * $$file-extension,
    }
 
    directory-entry = {
      filesystem-item,
      path-elements => { path-elements-group },
-     * $$directory-extension
+     * $$directory-extension,
    }
 
    process-entry = {
      global-attributes,
      process-name => text,
      ? pid => integer,
-     * $$process-extension
+     * $$process-extension,
    }
 
    resource-entry = {
      global-attributes,
      type => text,
-     * $$resource-extension
+     * $$resource-extension,
    }
 
    directory = 16
    file = 17
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 27]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    process = 18
    resource = 19
    size = 20
@@ -1506,13 +1533,6 @@ Internet-Draft                   CoSWID                       April 2020
    *  filesystem-item: A list of common items used for representing the
       filesystem root, relative location, name, and significance of a
       file or directory item.
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 27]
-
-Internet-Draft                   CoSWID                       April 2020
-
 
    *  global-attributes: The global-attributes group described in
       Section 2.5.
@@ -1542,6 +1562,14 @@ Internet-Draft                   CoSWID                       April 2020
    *  file-version (index 21): The file's version as reported by
       querying information on the file from the operating system.
 
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 28]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    *  key (index 22): A boolean value indicating if a file or directory
       is significant or required for the software component to execute
       or function properly.  These are files or directories that can be
@@ -1561,15 +1589,6 @@ Internet-Draft                   CoSWID                       April 2020
    *  root (index 25): A filesystem-specific name for the root of the
       filesystem.  The location item is considered relative to this
       location if specified.  If not provided, the value provided by the
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 28]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
       location item is expected to be relative to its parent or the
       location of the CoSWID tag if no parent is provided.
 
@@ -1599,6 +1618,14 @@ Internet-Draft                   CoSWID                       April 2020
    *  $$process-extension: This CDDL socket can be used to extend the
       process-entry group model.  See Section 2.2.
 
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 29]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    *  $$resource-extension: This CDDL socket can be used to extend the
       resource-entry group model.  See Section 2.2.
 
@@ -1609,22 +1636,13 @@ Internet-Draft                   CoSWID                       April 2020
    payload-entry = {
      global-attributes,
      resource-collection,
-     * $$payload-extension
+     * $$payload-extension,
    }
 
    The following describes each child item of this group.
 
    *  global-attributes: The global-attributes group described in
       Section 2.5.
-
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 29]
-
-Internet-Draft                   CoSWID                       April 2020
-
 
    *  resource-collection: The resource-collection group described in
       Section 2.9.2.
@@ -1641,7 +1659,7 @@ Internet-Draft                   CoSWID                       April 2020
      resource-collection,
      ? date => time,
      ? device-id => text,
-     * $$evidence-extension
+     * $$evidence-extension,
    }
 
    date = 35
@@ -1655,6 +1673,15 @@ Internet-Draft                   CoSWID                       April 2020
    *  resource-collection: The resource-collection group described in
       Section 2.9.2.
 
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 30]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    *  date (index 35): The date and time the information was collected
       pertaining to the evidence item.
 
@@ -1664,24 +1691,13 @@ Internet-Draft                   CoSWID                       April 2020
    *  $$evidence-extension: This CDDL socket can be used to extend the
       evidence-entry group model.  See Section 2.2.
 
-2.10.  Full CDDL Definition
+2.10.  Full CDDL Specification
 
    In order to create a valid CoSWID document the structure of the
-   corresponding CBOR message MUST adhere to the following CDDL data
-   definition.
+   corresponding CBOR message MUST adhere to the following CDDL
+   specification.
 
-
-
-
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 30]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
+   <CODE START>
    concise-swid-tag = {
      global-attributes,
      tag-id => text / bstr .size 16,
@@ -1696,9 +1712,14 @@ Internet-Draft                   CoSWID                       April 2020
      ? software-meta => software-meta-entry / [ 2* software-meta-entry ],
      entity => entity-entry / [ 2* entity-entry ],
      ? link => link-entry / [ 2* link-entry ],
-     ? (( payload => payload-entry ) // ( evidence => evidence-entry )),
+     ? payload-or-evidence,
      * $$coswid-extension,
    }
+
+   payload-or-evidence //= ( payload => payload-entry )
+   payload-or-evidence //= ( payload => [ 2* payload-entry ] )
+   payload-or-evidence //= ( evidence => evidence-entry )
+   payload-or-evidence //= ( evidence => [ 2* evidence-entry ] )
 
    any-uri = text
    label = text / int
@@ -1709,6 +1730,13 @@ Internet-Draft                   CoSWID                       April 2020
    $version-scheme /= decimal
    $version-scheme /= semver
    $version-scheme /= uint / text
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 31]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    any-attribute = (
      label => text / int / [ 2* text ] / [ 2* int ]
@@ -1730,14 +1758,6 @@ Internet-Draft                   CoSWID                       April 2020
      ? reg-id => any-uri,
      role => $role / [ 2* $role ],
      ? thumbprint => hash-entry,
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 31]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
      * $$entity-extension,
    }
 
@@ -1746,6 +1766,7 @@ Internet-Draft                   CoSWID                       April 2020
    $role /= aggregator
    $role /= distributor
    $role /= licensor
+   $role /= maintainer
    $role /= uint / text
 
    link-entry = {
@@ -1764,6 +1785,14 @@ Internet-Draft                   CoSWID                       April 2020
    $ownership /= private
    $ownership /= abandon
    $ownership /= uint / text
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 32]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    $rel /= ancestor
    $rel /= component
@@ -1786,14 +1815,6 @@ Internet-Draft                   CoSWID                       April 2020
    software-meta-entry = {
      global-attributes,
      ? activation-status => text,
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 32]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
      ? channel-type => text,
      ? colloquial-version => text,
      ? description => text,
@@ -1811,16 +1832,23 @@ Internet-Draft                   CoSWID                       April 2020
      * $$software-meta-extension,
    }
 
-   path-elements-group = ( ? directory => directory / [ 2* directory-entry ],
+   path-elements-group = ( ? directory => directory-entry / [ 2* directory-entry ],
                            ? file => file-entry / [ 2* file-entry ],
                          )
 
    resource-collection = (
      path-elements-group,
      ? process => process-entry / [ 2* process-entry ],
-     ? resource => resource-entry /[ 2* resource-entry ],
+     ? resource => resource-entry / [ 2* resource-entry ],
      * $$resource-collection-extension,
    )
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 33]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    file-entry = {
      filesystem-item,
@@ -1842,13 +1870,6 @@ Internet-Draft                   CoSWID                       April 2020
      ? pid => integer,
      * $$process-extension,
    }
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 33]
-
-Internet-Draft                   CoSWID                       April 2020
-
 
    resource-entry = {
      global-attributes,
@@ -1878,6 +1899,13 @@ Internet-Draft                   CoSWID                       April 2020
      * $$evidence-extension,
    }
 
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 34]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    ; "global map member" integer indexes
    tag-id = 0
    software-name = 1
@@ -1898,14 +1926,6 @@ Internet-Draft                   CoSWID                       April 2020
    directory = 16
    file = 17
    process = 18
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 34]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    resource = 19
    size = 20
    file-version = 21
@@ -1934,6 +1954,14 @@ Internet-Draft                   CoSWID                       April 2020
    colloquial-version = 45
    description = 46
    edition = 47
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 35]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    entitlement-data-required = 48
    entitlement-key = 49
    generator = 50
@@ -1954,18 +1982,11 @@ Internet-Draft                   CoSWID                       April 2020
 
    ; "role" integer indexes
    tag-creator=1
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 35]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    software-creator=2
    aggregator=3
    distributor=4
    licensor=5
+   maintainer=6
 
    ; "ownership" integer indexes
    shared=1
@@ -1983,11 +2004,21 @@ Internet-Draft                   CoSWID                       April 2020
    requires=8
    see-also=9
    supersedes=10
+   ; supplemental=11 ; this is already defined earlier
 
    ; "use" integer indexes
    optional=1
    required=2
    recommended=3
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 36]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
+   <CODE END>
 
 3.  Determining the Type of CoSWID
 
@@ -2010,14 +2041,6 @@ Internet-Draft                   CoSWID                       April 2020
    4.  Patch Tag: A CoSWID tag MUST be considered a patch tag if the
        patch item is "true".
 
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 36]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    Note: Multiple of the corpus, patch, and supplemental items can have
    values set as "true".  The rules above provide a means to determine
    the tag's type in such a case.  For example, a SWID or CoSWID tag for
@@ -2037,6 +2060,19 @@ Internet-Draft                   CoSWID                       April 2020
    value.  The Version Scheme Name provides human-readable text for the
    value.  The Definition describes the syntax of allowed values for
    each entry.
+
+
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 37]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    +-------+-------------------------+--------------------------------+
    | Index | Version Scheme Name     | Definition                     |
@@ -2065,15 +2101,6 @@ Internet-Draft                   CoSWID                       April 2020
                       Table 3: Version Scheme Values
 
    The values above are registered in the IANA "SWID/CoSWID Version
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 37]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    Scheme Value" registry defined in section Section 5.2.4.  Additional
    entries will likely be registered over time in this registry.
 
@@ -2091,6 +2118,17 @@ Internet-Draft                   CoSWID                       April 2020
       versioning syntax.  When a corresponding software-version item's
       value falls within this overlapping value space, the "semver"
       version scheme SHOULD be used.
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 38]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    *  "alphanumeric" and other version schemes might overlap in their
       value space.  When a corresponding software-version item's value
@@ -2125,9 +2163,27 @@ Internet-Draft                   CoSWID                       April 2020
 
 
 
-Birkholz, et al.         Expires 1 November 2020               [Page 38]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 39]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
    +-------+-----------------+----------------------------------------+
@@ -2163,28 +2219,34 @@ Internet-Draft                   CoSWID                       April 2020
    |       |                 | license for a specific software        |
    |       |                 | [component]"                           |
    +-------+-----------------+----------------------------------------+
+   | 6     | maintainer      | The person or organization that is     |
+   |       |                 | responsible for coordinating and       |
+   |       |                 | making updates to the source code for  |
+   |       |                 | the software component.  This SHOULD   |
+   |       |                 | be used when the "maintainer" is a     |
+   |       |                 | different person or organization than  |
+   |       |                 | the original "softwareCreator".        |
+   +-------+-----------------+----------------------------------------+
 
                        Table 4: Entity Role Values
+
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 40]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    The values above are registered in the IANA "SWID/CoSWID Entity Role
    Value" registry defined in section Section 5.2.5.  Additional values
    will likely be registered over time.  Additionally, the index values
    128 through 255 and the name prefix "x_" have been reserved for
    private use.
-
-
-
-
-
-
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 39]
-
-Internet-Draft                   CoSWID                       April 2020
-
 
 4.3.  Link Ownership Values
 
@@ -2202,7 +2264,7 @@ Internet-Draft                   CoSWID                       April 2020
    +=======+===========+===============================================+
    | 1     | abandon   | If the software component referenced by the   |
    |       |           | CoSWID tag is uninstalled, then the           |
-   |       |           | referenced software SHOULD not be             |
+   |       |           | referenced software SHOULD NOT be             |
    |       |           | uninstalled                                   |
    +-------+-----------+-----------------------------------------------+
    | 2     | private   | If the software component referenced by the   |
@@ -2224,6 +2286,18 @@ Internet-Draft                   CoSWID                       April 2020
    the index values 128 through 255 and the name prefix "x_" have been
    reserved for private use.
 
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 41]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
 4.4.  Link Rel Values
 
    The following table indicates the index value to use for the link-
@@ -2233,14 +2307,6 @@ Internet-Draft                   CoSWID                       April 2020
    link-entry group ownership item's value.  The "Relationship Type"
    provides human-readable text for the value.  The "Definition"
    describes the semantic meaning of each entry.
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 40]
-
-Internet-Draft                   CoSWID                       April 2020
-
 
    +-------+-------------------+---------------------------------------+
    | Index | Relationship Type | Definition                            |
@@ -2280,6 +2346,14 @@ Internet-Draft                   CoSWID                       April 2020
    |       |                   | "parent" link relationship to the     |
    |       |                   | bundle's SWID/CoSWID tag, and the     |
    |       |                   | bundle can provide a "component"      |
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 42]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    |       |                   | link relationship to each child       |
    |       |                   | software component.                   |
    +-------+-------------------+---------------------------------------+
@@ -2290,14 +2364,6 @@ Internet-Draft                   CoSWID                       April 2020
    |       |                   | Section 1.1).                         |
    +-------+-------------------+---------------------------------------+
    | 8     | requires          | The link references a prerequisite    |
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 41]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    |       |                   | for installing this software.  A      |
    |       |                   | patch SWID/CoSWID tag (see            |
    |       |                   | Section 1.1) can use this to          |
@@ -2330,6 +2396,20 @@ Internet-Draft                   CoSWID                       April 2020
    the index values 32768 through 65535 and the name prefix "x_" have
    been reserved for private use.
 
+
+
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 43]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
 4.5.  Link Use Values
 
    The following table indicates the index value to use for the link-
@@ -2339,20 +2419,6 @@ Internet-Draft                   CoSWID                       April 2020
    link-entry group use item's value.  The "Use Type" provides human-
    readable text for the value.  The "Definition" describes the semantic
    meaning of each entry.
-
-
-
-
-
-
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 42]
-
-Internet-Draft                   CoSWID                       April 2020
-
 
      +-------+-------------+----------------------------------------+
      | Index | Use Type    | Definition                             |
@@ -2393,6 +2459,13 @@ Internet-Draft                   CoSWID                       April 2020
    registrations for this registry are to be made based on [RFC8126] as
    follows:
 
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 44]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
               +------------------+-------------------------+
               | Range            | Registration Procedures |
               +==================+=========================+
@@ -2402,13 +2475,6 @@ Internet-Draft                   CoSWID                       April 2020
               +------------------+-------------------------+
 
               Table 8: CoSWID Items Registration Proceedures
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 43]
-
-Internet-Draft                   CoSWID                       April 2020
-
 
    All negative values are reserved for Private Use.
 
@@ -2448,6 +2514,14 @@ Internet-Draft                   CoSWID                       April 2020
        | 13            | software-version          | RFC-AAAA      |
        +---------------+---------------------------+---------------+
        | 14            | version-scheme            | RFC-AAAA      |
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 45]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
        +---------------+---------------------------+---------------+
        | 15            | lang                      | RFC-AAAA      |
        +---------------+---------------------------+---------------+
@@ -2458,14 +2532,6 @@ Internet-Draft                   CoSWID                       April 2020
        | 18            | process                   | RFC-AAAA      |
        +---------------+---------------------------+---------------+
        | 19            | resource                  | RFC-AAAA      |
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 44]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
        +---------------+---------------------------+---------------+
        | 20            | size                      | RFC-AAAA      |
        +---------------+---------------------------+---------------+
@@ -2504,6 +2570,14 @@ Internet-Draft                   CoSWID                       April 2020
        | 38            | href                      | RFC-AAAA      |
        +---------------+---------------------------+---------------+
        | 39            | ownership                 | RFC-AAAA      |
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 46]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
        +---------------+---------------------------+---------------+
        | 40            | rel                       | RFC-AAAA      |
        +---------------+---------------------------+---------------+
@@ -2514,14 +2588,6 @@ Internet-Draft                   CoSWID                       April 2020
        | 43            | activation-status         | RFC-AAAA      |
        +---------------+---------------------------+---------------+
        | 44            | channel-type              | RFC-AAAA      |
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 45]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
        +---------------+---------------------------+---------------+
        | 45            | colloquial-version        | RFC-AAAA      |
        +---------------+---------------------------+---------------+
@@ -2559,6 +2625,15 @@ Internet-Draft                   CoSWID                       April 2020
    The following IANA registries provide a mechanism for new values to
    be added over time to common enumerations used by SWID and CoSWID.
 
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 47]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
 5.2.1.  Registration Proceedures
 
    The following registries allow for the registration of index values
@@ -2570,14 +2645,6 @@ Internet-Draft                   CoSWID                       April 2020
 
    The following registries also reserve the integer-based index values
    in the range of -1 to -256 for private use as defined by [BCP26] in
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 46]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    section 4.1.  This allows values -1 to -24 to be expressed as a
    single uint_8t in CBOR, and values -25 to -256 to be expressed using
    an additional uint_8t in CBOR.
@@ -2616,6 +2683,13 @@ Internet-Draft                   CoSWID                       April 2020
       the entry's index value or name, and other values defined within
       the SWID/CoSWID model.
 
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 48]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    *  Index values and names outside the private use space MUST NOT be
       used without registration.  This is considered squatting and
       SHOULD be avoided.  Designated experts MUST ensure that reviewed
@@ -2625,15 +2699,6 @@ Internet-Draft                   CoSWID                       April 2020
       range reserved for entries under the Specification Required
       policy.  This can occur when a standards track document provides
       further guidance on the use of index values and names that are in
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 47]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
       common use, but were not registered with IANA.  This situation
       SHOULD be avoided.
 
@@ -2673,22 +2738,17 @@ Internet-Draft                   CoSWID                       April 2020
    Assignments MUST consist of an integer Index value, the Version
    Scheme Name, and a reference to the defining specification.
 
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 49]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    Initial registrations for the "SWID/CoSWID Version Scheme Value"
    registry are provided below, which are derived from the textual
    version scheme names defined in [SWID].
-
-
-
-
-
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 48]
-
-Internet-Draft                   CoSWID                       April 2020
-
 
         +-------------+-------------------------+-----------------+
         | Index       | Version Scheme Name     | Specification   |
@@ -2737,13 +2797,9 @@ Internet-Draft                   CoSWID                       April 2020
 
 
 
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 49]
+Birkholz, et al.         Expires 5 December 2020               [Page 50]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
                    +---------+-------------------------+
@@ -2779,7 +2835,9 @@ Internet-Draft                   CoSWID                       April 2020
                +-------+-----------------+-----------------+
                | 5     | licensor        | See Section 4.2 |
                +-------+-----------------+-----------------+
-               | 6-255 | Unassigned      |                 |
+               | 6     | maintainer      | See Section 4.2 |
+               +-------+-----------------+-----------------+
+               | 7-255 | Unassigned      |                 |
                +-------+-----------------+-----------------+
 
                     Table 13: CoSWID Entity Role Inital
@@ -2788,19 +2846,24 @@ Internet-Draft                   CoSWID                       April 2020
    Registrations MUST conform to the expert review guidlines defined in
    Section 5.2.3.
 
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 51]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
 5.2.6.  SWID/CoSWID Link Ownership Value Registry
 
    This document establishes a new registry titled "SWID/CoSWID Link
    Ownership Values".  This registry provides index values for use as
    link-entry ownership item values in this document and link ownership
    names for use in [SWID].
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 50]
-
-Internet-Draft                   CoSWID                       April 2020
-
 
    [TO BE REMOVED: This registration should take place at the following
    location: https://www.iana.org/assignments/swid]
@@ -2843,20 +2906,16 @@ Internet-Draft                   CoSWID                       April 2020
                    Table 15: CoSWID Link Ownership Inital
                                Registrations
 
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 52]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    Registrations MUST conform to the expert review guidlines defined in
    Section 5.2.3.
-
-
-
-
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 51]
-
-Internet-Draft                   CoSWID                       April 2020
-
 
 5.2.7.  SWID/CoSWID Link Relationship Value Registry
 
@@ -2906,12 +2965,9 @@ Internet-Draft                   CoSWID                       April 2020
 
 
 
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 52]
+Birkholz, et al.         Expires 5 December 2020               [Page 53]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
           +----------+------------------------+-----------------+
@@ -2965,9 +3021,9 @@ Internet-Draft                   CoSWID                       April 2020
 
 
 
-Birkholz, et al.         Expires 1 November 2020               [Page 53]
+Birkholz, et al.         Expires 5 December 2020               [Page 54]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
    [TO BE REMOVED: This registration should take place at the following
@@ -3021,9 +3077,9 @@ Internet-Draft                   CoSWID                       April 2020
 
 
 
-Birkholz, et al.         Expires 1 November 2020               [Page 54]
+Birkholz, et al.         Expires 5 December 2020               [Page 55]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
    Type name: application
@@ -3077,9 +3133,9 @@ Internet-Draft                   CoSWID                       April 2020
 
 
 
-Birkholz, et al.         Expires 1 November 2020               [Page 55]
+Birkholz, et al.         Expires 5 December 2020               [Page 56]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
 5.4.  CoAP Content-Format Registration
@@ -3133,9 +3189,9 @@ Internet-Draft                   CoSWID                       April 2020
 
 
 
-Birkholz, et al.         Expires 1 November 2020               [Page 56]
+Birkholz, et al.         Expires 5 December 2020               [Page 57]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
    The "swid" scheme is specified as follows:
@@ -3177,6 +3233,23 @@ Internet-Draft                   CoSWID                       April 2020
    XPath expression will be URI encoded according to [RFC3986] section
    2.1.
 
+
+
+
+
+
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 58]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    Scheme semantics: URIs in the "swidpath" scheme are to be used
    specify the data that must be found in a given SWID/CoSWID tag for
    that tag to be considered a matching tag to be included in the
@@ -3185,15 +3258,6 @@ Internet-Draft                   CoSWID                       April 2020
    tag is installed on a given device, that tag can reference related
    tags on the same device using this URI scheme.  A tag is matching if
    the XPath evaluation result value has an effective boolean value of
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 57]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    "true" according to [W3C.REC-xpath20-20101214] section 2.4.3. rence
    related tags on the same device using this URI scheme.
 
@@ -3235,20 +3299,15 @@ Internet-Draft                   CoSWID                       April 2020
    represented using the UUID string representation defined in [RFC4122]
    including the "urn:uuid:" prefix.
 
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 59]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    The TAG_CREATOR_REGID and the UNIQUE_ID are connected with a double
    underscore (_), without any other connecting character or whitespace.
-
-
-
-
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 58]
-
-Internet-Draft                   CoSWID                       April 2020
-
 
 6.  Security Considerations
 
@@ -3295,17 +3354,16 @@ Internet-Draft                   CoSWID                       April 2020
    corresponding SWID tag.  As such, any collection of SWID/CoSWID tags
    cannot automatically be assumed to represent either a complete or
    fully accurate representation of the software inventory of the
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 60]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
    endpoint.  However, especially on endpoint devices that more strictly
    control the ability to add or remove applications, SWID/CoSWID tags
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 59]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    are an easy way to provide an preliminary understanding of that
    endpoint's software inventory.
 
@@ -3330,9 +3388,9 @@ Internet-Draft                   CoSWID                       April 2020
    information about that endpoint's attack surface.
 
    Finally, both the ISO-19770-2:2015 XML schema SWID definition and the
-   CoSWID data definition allow for the construction of "infinite" tags
-   with link item loops or tags that contain malicious content with the
-   intent of creating non-deterministic states during validation or
+   CoSWID CDDL specification allow for the construction of "infinite"
+   tags with link item loops or tags that contain malicious content with
+   the intent of creating non-deterministic states during validation or
    processing of those tags.  While software providers are unlikely to
    do this, SWID/CoSWID tags can be created by any party and the SWID/
    CoSWID tags collected from an endpoint could contain a mixture of
@@ -3349,18 +3407,56 @@ Internet-Draft                   CoSWID                       April 2020
 
    We are also grateful to the careful reviews provided by ...
 
+
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 61]
+
+Internet-Draft                   CoSWID                        June 2020
+
+
 8.  Change Log
 
    [THIS SECTION TO BE REMOVED BY THE RFC EDITOR.]
 
    Changes from version 12 to version 14:
 
+   *  Moved key identifier to protected COSE header
 
+   *  Fixed index reference for hash
 
-Birkholz, et al.         Expires 1 November 2020               [Page 60]
-
-Internet-Draft                   CoSWID                       April 2020
+   *  Removed indirection of CDDL type definition for filesystem-item
 
+   *  Fixed quantity of resource and process
+
+   *  Updated resource-collection
+
+   *  Renamed socket name in software-meta to be consistent in naming
+
+   *  Aligned excerpt examples in I-D text with full CDDL
+
+   *  Fixed titels where title was referring to group instead of map
+
+   *  Added missig date in SEMVER
+
+   *  Fixed root cardinality for file and directory, etc.
+
+   *  Transformed path-elements-entry from map to group for re-usability
+
+   *  Scrubbed IANA section
+
+   *  Removed redundant supplemental rule
+
+   *  Aligned discrepancy with ISO spec.
+
+   *  Addressed comments on typos.
+
+   *  Fixed kramdown nits and BCP reference.
+
+   *  Addressed comments from WGLC reviewers.
 
    Changes in version 12:
 
@@ -3370,6 +3466,13 @@ Internet-Draft                   CoSWID                       April 2020
    *  Added text about the use of UTF-8 in CoSWID.
 
    *  Adjusted tag-id to allow for a UUID to be provided as a bstr.
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 62]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    *  Cleaned up descriptions of index ranges throughout the document,
       removing discussion of 8 bit, 16 bit, etc.
@@ -3411,13 +3514,6 @@ Internet-Draft                   CoSWID                       April 2020
    *  Updated section on extension points to address new CDDL sockets
       and to reference the new IANA registry for items.
 
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 61]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    *  Removed unused references and added new references to address
       placeholder comments.
 
@@ -3425,6 +3521,14 @@ Internet-Draft                   CoSWID                       April 2020
 
    *  Clarified language, made term use more consistent, fixed
       references, and replacing lowercase RFC2119 keywords.
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 63]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    Changes from version 02 to version 03:
 
@@ -3466,14 +3570,6 @@ Internet-Draft                   CoSWID                       April 2020
    *  Removed redundant any-attributes originating from the ISO-
       19770-2:2015 XML schema definition
 
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 62]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    *  Fixed broken multi-map members
 
    *  Introduced a more restrictive item (any-element-map) to represent
@@ -3481,6 +3577,14 @@ Internet-Draft                   CoSWID                       April 2020
       accordingly
 
    *  Fixed X.1520 reference
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 64]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    *  Minor type changes of some attributes (e.g.  NMTOKENS)
 
@@ -3522,20 +3626,21 @@ Internet-Draft                   CoSWID                       April 2020
 
    *  Added extension points
 
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 63]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    *  Improved exemplary firmware-resource extension
 
    Changes from version 04 to version 05:
 
    *  Clarified language around SWID and CoSWID to make more consistent
       use of these terms.
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 65]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    *  Added language describing CBOR optimizations for single vs. arrays
       in the model front matter.
@@ -3578,14 +3683,6 @@ Internet-Draft                   CoSWID                       April 2020
    *  Added sections discussing use of COSE Signatures and CBOR Web
       Tokens
 
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 64]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    Changes from version 00 to version 01:
 
    *  Added CWT usage for absolute SWID paths on a device
@@ -3593,6 +3690,13 @@ Internet-Draft                   CoSWID                       April 2020
    *  Fixed cardinality of type-choices including arrays
 
    *  Included first iteration of firmware resource-collection
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 66]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
 9.  References
 
@@ -3633,21 +3737,22 @@ Internet-Draft                   CoSWID                       April 2020
 
    [RFC5892]  Faltstrom, P., Ed., "The Unicode Code Points and
               Internationalized Domain Names for Applications (IDNA)",
-
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 65]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
               RFC 5892, DOI 10.17487/RFC5892, August 2010,
               <https://www.rfc-editor.org/info/rfc5892>.
 
    [RFC7049]  Bormann, C. and P. Hoffman, "Concise Binary Object
               Representation (CBOR)", RFC 7049, DOI 10.17487/RFC7049,
               October 2013, <https://www.rfc-editor.org/info/rfc7049>.
+
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 67]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    [RFC7252]  Shelby, Z., Hartke, K., and C. Bormann, "The Constrained
               Application Protocol (CoAP)", RFC 7252,
@@ -3690,17 +3795,20 @@ Internet-Draft                   CoSWID                       April 2020
    [SEMVER]   Preston-Werner, T., "Semantic Versioning 2.0.0",
               <https://semver.org/spec/v2.0.0.html>.
 
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 66]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    [SWID]     "Information technology - Software asset management - Part
               2: Software identification tag", ISO/IEC 19770-2:2015, 1
               October 2015.
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 68]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    [W3C.REC-css3-mediaqueries-20120619]
               Rivoal, F., "Media Queries", World Wide Web Consortium
@@ -3746,18 +3854,17 @@ Internet-Draft                   CoSWID                       April 2020
               DOI 10.17487/RFC4122, July 2005,
               <https://www.rfc-editor.org/info/rfc4122>.
 
-
-
-
-Birkholz, et al.         Expires 1 November 2020               [Page 67]
-
-Internet-Draft                   CoSWID                       April 2020
-
-
    [RFC8322]  Field, J., Banghart, S., and D. Waltermire, "Resource-
               Oriented Lightweight Information Exchange (ROLIE)",
               RFC 8322, DOI 10.17487/RFC8322, February 2018,
               <https://www.rfc-editor.org/info/rfc8322>.
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 69]
+
+Internet-Draft                   CoSWID                        June 2020
+
 
    [RFC8520]  Lear, E., Droms, R., and D. Romascanu, "Manufacturer Usage
               Description Specification", RFC 8520,
@@ -3805,9 +3912,14 @@ Appendix A.  Signed Concise SWID Tags using COSE
 
 
 
-Birkholz, et al.         Expires 1 November 2020               [Page 68]
+
+
+
+
+
+Birkholz, et al.         Expires 5 December 2020               [Page 70]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
    <CODE BEGINS>
@@ -3819,11 +3931,11 @@ Internet-Draft                   CoSWID                       April 2020
    protected-signed-coswid-header = {
        1 => int,                      ; algorithm identifier
        3 => "application/swid+cbor",
+       4 => bstr,                     ; key identifier
        * cose-label => cose-values,
    }
 
    unprotected-signed-coswid-header = {
-       4 => bstr,                     ; key identifier
        * cose-label => cose-values,
    }
 
@@ -3861,9 +3973,9 @@ Authors' Addresses
 
 
 
-Birkholz, et al.         Expires 1 November 2020               [Page 69]
+Birkholz, et al.         Expires 5 December 2020               [Page 71]
 
-Internet-Draft                   CoSWID                       April 2020
+Internet-Draft                   CoSWID                        June 2020
 
 
    Jessica Fitzgerald-McKay
@@ -3917,4 +4029,4 @@ Internet-Draft                   CoSWID                       April 2020
 
 
 
-Birkholz, et al.         Expires 1 November 2020               [Page 70]
+Birkholz, et al.         Expires 5 December 2020               [Page 72]
